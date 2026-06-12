@@ -39,6 +39,11 @@ xiaomi,ax6000)
 	ucidef_set_led_netdev "wan-port-link-top-blue" "WAN-PORT-LINK-TOP-BLUE" "blue:wan" "wan" "link_1000 link_2500"
 	ucidef_set_led_netdev "wan-port-link-top-yellow" "WAN-PORT-LINK-TOP-YELLOW" "yellow:wan" "wan" "link_10 link_100"
 	;;
+tplink,ax23-v2)
+	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth1"
+	ucidef_set_led_wlan "wlan2g" "WLAN2G" "green:2g" "phy0"
+	ucidef_set_led_wlan "wlan5g" "WLAN5G" "green:5g" "phy1"
+	;;
 esac
 
 board_config_flush

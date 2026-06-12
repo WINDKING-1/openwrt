@@ -285,3 +285,21 @@ define Device/zyxel_scr50axe
 		ipq-wifi-zyxel_scr50axe
 endef
 TARGET_DEVICES += zyxel_scr50axe
+
+define Device/tplink_archer-ax23-v2
+	$(call Device/FitImageLzma)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := TP-Link
+	DEVICE_MODEL := Archer AX23
+	DEVICE_VARIANT := v2
+	DEVICE_DTS_CONFIG := config@mp02.1
+	SOC := ipq5018
+	DEVICE_DTS := ipq5018-tplink-ax23-v2
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	NAND_SIZE := 128m
+	SUPPORTED_DEVICES := tplink,ax23-v2
+	DEVICE_PACKAGES := kmod-ath11k-smallbuffers ath11k-firmware-ipq5018-qcn6122 \
+		ipq-wifi-tplink_archer-ax23-v2
+endef
+TARGET_DEVICES += tplink_archer-ax23-v2
