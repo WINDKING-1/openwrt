@@ -299,6 +299,9 @@ define Device/tplink_archer-ax23-v2
 	PAGESIZE := 2048
 	NAND_SIZE := 128m
 	SUPPORTED_DEVICES := tplink,ax23-v2
+	IMAGES := factory.bin sysupgrade.bin
+	IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+	IMAGE/factory.bin := append-rootfs | tplink-safeloader archer-ax23-v2
 	DEVICE_PACKAGES := kmod-ath11k-smallbuffers ath11k-firmware-ipq5018-qcn6122 \
 		ipq-wifi-tplink_archer-ax23-v2
 endef
