@@ -40,8 +40,8 @@ xiaomi,ax6000)
 	ucidef_set_led_netdev "wan-port-link-top-yellow" "WAN-PORT-LINK-TOP-YELLOW" "yellow:wan" "wan" "link_10 link_100"
 	;;
 tplink,ax23-v2)
-	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth1" "tx rx link_10 link_100 link_1000"
-	ucidef_set_led_netdev "wan_orange" "WAN_ORANGE" "orange:wan" "eth1" "link_10 link_100"
+	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth0" "tx rx link_10 link_100 link_1000"
+	ucidef_set_led_netdev "wan_orange" "WAN_ORANGE" "orange:wan" "eth0" "link_10 link_100"
 	ucidef_set_led_netdev "lan" "LAN" "green:lan" "br-lan" "tx rx"
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "green:wlan2g" "phy0"
 	ucidef_set_led_wlan "wlan5g" "WLAN5G" "green:wlan5g" "phy1"
